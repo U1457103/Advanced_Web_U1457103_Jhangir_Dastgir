@@ -17,6 +17,8 @@ class PagesController extends Controller
     public function song(){
 
 
+      $songs = ['ohh song', 'ohhh new song'];
+
 
  return view('pages.song', compact('songs'));
 

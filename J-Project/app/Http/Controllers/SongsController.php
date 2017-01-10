@@ -20,7 +20,13 @@ class SongsController extends Controller
 public function show(Song $song)
 
 {
+
     $song->load('notes.user');
+
+
+
+    $song->load('notes.user');
+
 
 
 

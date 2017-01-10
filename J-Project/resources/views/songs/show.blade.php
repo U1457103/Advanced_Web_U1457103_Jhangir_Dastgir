@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('content')
+
+
 <div class="row">
 
 
@@ -16,12 +18,13 @@
 @foreach ($song->notes as $note)
   <li class="list-group-item">
     {{ $note->body }}
+
     <a href="/notes/{{ $note->id}}>{{ $note->id }}/edit" class="pull-right">{{ $note->user->name }}</a>
+
+    <a href='#' class="pull-right">{{ $note->user->name }}</a>
+
+
   </li>
-@continue
-
-You must be logged in, in order to edit a comment!
-
 @endforeach
 
 </ul>
@@ -40,7 +43,6 @@ You must be logged in, in order to edit a comment!
 </form>
 
 
-
 @if (count($errors))
   <ul>
     @foreach ($errors->all() as $error)
@@ -49,10 +51,23 @@ You must be logged in, in order to edit a comment!
       </li>
 @endforeach
   </ul>
+
 @endif
+
+
+
+@endif
+
+
 
 
   </div>
 </div>
+
+
+
+
+  <h1>{{$song->title}}</h1>
+
 
 @stop
