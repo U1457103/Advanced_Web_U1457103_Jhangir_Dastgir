@@ -16,7 +16,11 @@ class PagesController extends Controller
 
     public function song(){
 
+<<<<<<< HEAD
       $songs = ['ohh song', 'ohhh new song'];
+=======
+
+>>>>>>> changes
 
  return view('pages.song', compact('songs'));
 

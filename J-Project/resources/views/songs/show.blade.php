@@ -1,10 +1,8 @@
 @extends('layout')
 
 @section('content')
-<<<<<<< HEAD
-=======
 
->>>>>>> 1931d75cac7afb892750bb2c97393a6ae87a7ffa
+
 <div class="row">
 
 
@@ -20,10 +18,12 @@
 @foreach ($song->notes as $note)
   <li class="list-group-item">
     {{ $note->body }}
-<<<<<<< HEAD
+
     <a href='#' class="pull-right">{{ $note->user->name }}</a>
-=======
->>>>>>> 1931d75cac7afb892750bb2c97393a6ae87a7ffa
+
+
+    <a href="/notes/{{ $note->id}}>{{ $note->id }}/edit" class="pull-right">{{ $note->user->name }}</a>
+
   </li>
 @endforeach
 
@@ -42,7 +42,7 @@
 </div>
 </form>
 
-<<<<<<< HEAD
+
 @if (count($errors))
   <ul>
     @foreach ($errors->all() as $error)
@@ -51,22 +51,23 @@
       </li>
 @endforeach
   </ul>
+<<<<<<< HEAD
 
 
 @endif
-=======
->>>>>>> 1931d75cac7afb892750bb2c97393a6ae87a7ffa
+
+
+@endif
 
 
   </div>
 </div>
 
-<<<<<<< HEAD
-=======
+
 
 
   <h1>{{$song->title}}</h1>
 
 
->>>>>>> 1931d75cac7afb892750bb2c97393a6ae87a7ffa
+
 @stop
