@@ -2,18 +2,32 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+<<<<<<< HEAD
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>J's Website</title>
 
 
   <link href="/css/app.css" rel="stylesheet">
+=======
+
+        <title>J's Website</title>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+        <title>Test</title>
+
+<link rel="stylesheet" href="/css/style.css">
+>>>>>>> 1931d75cac7afb892750bb2c97393a6ae87a7ffa
 
 
         @yield('header')
       </head>
 
       <body>
+<<<<<<< HEAD
         <div id="app">
             <nav class="navbar navbar-default navbar-static-top">
                 <div class="container">
@@ -75,11 +89,20 @@
                     </div>
                 </div>
             </nav>
+=======
+
+>>>>>>> 1931d75cac7afb892750bb2c97393a6ae87a7ffa
 
 <div class="container">
 @yield('content')
 </div>
 
+<<<<<<< HEAD
+=======
+@yield('content')
+
+
+>>>>>>> 1931d75cac7afb892750bb2c97393a6ae87a7ffa
 @yield('footer')
 
       </body>
