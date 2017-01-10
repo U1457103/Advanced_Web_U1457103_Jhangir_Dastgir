@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+
 <div class="row">
 
 
@@ -38,5 +39,10 @@
 
   </div>
 </div>
+
+
+
+  <h1>{{$song->title}}</h1>
+
 
 @stop

@@ -6,7 +6,13 @@
 
   @foreach ($songs as $song)
     <div>
+
           <a href="/songs/{{ $song->id}}">{{ $song->title }}</a>
+    </div>
+
+
+      {{ $song->title}}
+
     </div>
 
   @endforeach
