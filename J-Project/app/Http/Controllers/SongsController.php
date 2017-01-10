@@ -20,12 +20,15 @@ class SongsController extends Controller
 public function show(Song $song)
 
 {
-<<<<<<< HEAD
+
     $song->load('notes.user');
 
 
-=======
->>>>>>> 1931d75cac7afb892750bb2c97393a6ae87a7ffa
+
+    $song->load('notes.user');
+
+
+
 
    return view('songs.show', compact('song'));
 
