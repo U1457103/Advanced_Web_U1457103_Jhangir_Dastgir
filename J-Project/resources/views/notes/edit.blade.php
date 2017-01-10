@@ -1,9 +1,7 @@
 @extends('layout')
 
 @section('content')
-
   <h1>Edit your comment</h1>
-
 
 
 
