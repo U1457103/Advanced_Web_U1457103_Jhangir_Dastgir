@@ -8,13 +8,20 @@ class Note extends Model
 {
 
   protected $fillable = ['song_id', 'body', 'created_at', 'updated_at'];
+
   protected $table = 'notes';
+
+  protected $table = 'notes';
+
+   protected $table = 'notes';
+
 
 
     public function song()
     {
       return $this->belongsTo(Song::class);
     }
+
 
 
   public function user()
@@ -27,5 +34,6 @@ class Note extends Model
   {
     $this->user_id = $user->id;
   }
+
 
 }
