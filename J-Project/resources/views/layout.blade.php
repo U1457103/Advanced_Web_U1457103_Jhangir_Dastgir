@@ -70,8 +70,14 @@
                             @else
                                 <li class="dropdown">
 
+<<<<<<< HEAD
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <a href="/home" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+=======
+                                    <a href="/home" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+>>>>>>> acd777ceafb2eb5d49e94cdba13ba8f04e28f41e
 
                                         {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
@@ -96,6 +102,10 @@
                 </div>
             </nav>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> acd777ceafb2eb5d49e94cdba13ba8f04e28f41e
 
 <div class="container">
 @yield('content')

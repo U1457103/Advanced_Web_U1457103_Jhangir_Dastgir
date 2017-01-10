@@ -11,10 +11,17 @@ class Note extends Model
 
   protected $table = 'notes';
 
+<<<<<<< HEAD
    protected $table = 'notes';
 
   protected $table = 'notes';
 
+=======
+  protected $table = 'notes';
+
+   protected $table = 'notes';
+
+>>>>>>> acd777ceafb2eb5d49e94cdba13ba8f04e28f41e
 
 
     public function song()

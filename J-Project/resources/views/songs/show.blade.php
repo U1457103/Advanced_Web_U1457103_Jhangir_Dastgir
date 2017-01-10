@@ -19,11 +19,19 @@
   <li class="list-group-item">
     {{ $note->body }}
 
+<<<<<<< HEAD
     <a href='#' class="pull-right">{{ $note->user->name }}</a>
 
 
     <a href="/notes/{{ $note->id}}>{{ $note->id }}/edit" class="pull-right">{{ $note->user->name }}</a>
 
+=======
+    <a href="/notes/{{ $note->id}}>{{ $note->id }}/edit" class="pull-right">{{ $note->user->name }}</a>
+
+    <a href='#' class="pull-right">{{ $note->user->name }}</a>
+
+
+>>>>>>> acd777ceafb2eb5d49e94cdba13ba8f04e28f41e
   </li>
 @endforeach
 
@@ -52,12 +60,22 @@
 @endforeach
   </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> acd777ceafb2eb5d49e94cdba13ba8f04e28f41e
 
 @endif
 
 
+<<<<<<< HEAD
 @endif
+=======
+
+@endif
+
+
+>>>>>>> acd777ceafb2eb5d49e94cdba13ba8f04e28f41e
 
 
   </div>
@@ -69,5 +87,8 @@
   <h1>{{$song->title}}</h1>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> acd777ceafb2eb5d49e94cdba13ba8f04e28f41e
 @stop
