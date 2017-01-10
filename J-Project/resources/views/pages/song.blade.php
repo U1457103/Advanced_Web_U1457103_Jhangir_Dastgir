@@ -1,9 +1,13 @@
 @extends('layout')
 
+
 @section('header')
+
+
+
 
 @section('content')
 
-<h1>Hello and welcome to my songs website!</h1>
+<h1>All of the songs are displayed below</h1>
 
 @stop
