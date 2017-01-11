@@ -8,7 +8,13 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    You Are Logged In As A User. 
+
+                    <p>
+                      Go Ahead and explore the website!!
+                    </p>
+
+
                 </div>
             </div>
         </div>

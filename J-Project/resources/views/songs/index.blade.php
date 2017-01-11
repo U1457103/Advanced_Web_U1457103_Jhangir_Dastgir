@@ -2,28 +2,25 @@
 
 @section('content')
 
+  <h1>Are They Good? Are They Bad?</h1>
 
-  <h1>Rate The Artists</h1>
+<p>
+   What do you think!!! Click On The Singers And Write Your Comments!!
+</p>
 
   @foreach ($songs as $song)
     <div>
           <a href="/songs/{{ $song->id}}">{{ $song->title }}</a>
-    </div>
-
-
-  <h1>All Songs</h1>
-
-  @foreach ($songs as $song)
-    <div>
-
-          <a href="/songs/{{ $song->id}}">{{ $song->title }}</a>
-    </div>
-
-
-      {{ $song->title}}
 
     </div>
-
   @endforeach
+
+
+
+
+
+
+
+
 
 @stop

@@ -1,8 +1,6 @@
 @extends('layout')
 
 @section('content')
-
-
 <div class="row">
 
 
@@ -13,27 +11,16 @@
 
   <h1>{{$song->title}}</h1>
 
+@if (Auth::user())
 
 <ul class="list-group">
 @foreach ($song->notes as $note)
   <li class="list-group-item">
     {{ $note->body }}
-
-
-    <a href='#' class="pull-right">{{ $note->user->name }}</a>
-
-
     <a href="/notes/{{ $note->id}}>{{ $note->id }}/edit" class="pull-right">{{ $note->user->name }}</a>
-
-    <a href="/notes/{{ $note->id}}>{{ $note->id }}/edit" class="pull-right">{{ $note->user->name }}</a>
-
-    <a href='#' class="pull-right">{{ $note->user->name }}</a>
-
-
-
+    <a href="/notes/{{ $note->id}}>{{ $note->id }}/delete" class="pull-center">Delete</a>
   </li>
 @endforeach
-
 </ul>
 
 <h2>What do you think of this singer?</h2>
@@ -49,6 +36,18 @@
 </div>
 </form>
 
+@else
+  You need to be signed in to view the Comments.
+
+@endif
+
+
+@if(Session::has('flash_message'))
+    <div class="alert alert-success">
+        {{ Session::get('flash_message') }}
+    </div>
+@endif
+
 
 @if (count($errors))
   <ul>
@@ -58,26 +57,10 @@
       </li>
 @endforeach
   </ul>
-
 @endif
-
-
-
-@endif
-
-@endif
-
-
 
 
   </div>
 </div>
-
-
-
-
-  <h1>{{$song->title}}</h1>
-
-
 
 @stop
