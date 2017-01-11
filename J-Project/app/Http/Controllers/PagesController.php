@@ -18,6 +18,13 @@ class PagesController extends Controller
 
 
 
+      $songs = ['ohh song', 'ohhh new song'];
+
+
+      $songs = ['ohh song', 'ohhh new song'];
+
+
+
  return view('pages.song', compact('songs'));
 
 

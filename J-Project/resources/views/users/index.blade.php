@@ -6,17 +6,9 @@
 
 
 @foreach ($users as $user)
-
   <div>
-<p>
-    Username: {{$user->name}}
-</p>
-
-<P>
-  Email Address: {{$user->email}}
-</P>
+    {{$user->name}}
   </div>
-
 @endforeach
 
 
