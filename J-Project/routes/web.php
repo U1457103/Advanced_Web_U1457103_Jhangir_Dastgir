@@ -5,7 +5,7 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/', 'PagesController@home' );
+Route::get('/', 'HomeController@index' );
 
 Route::get('songs', 'SongsController@index' );
 

@@ -4,16 +4,17 @@
 
   <h1>{{$user->name}}</h1>
 
-<ul class="list-group">
+  <ul class="list-group">
+
 @foreach ($user->details as $detail)
 
-<li class="list-group-item">
+  <li class="list-group-item">
   {{$detail->body}}
-</li>
+  </li>
 
 @endforeach
 
-</ul>
+  </ul>
 
 
 @stop
