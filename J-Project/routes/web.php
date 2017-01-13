@@ -15,10 +15,10 @@ Route::get('users', 'UsersController@index' );
 
 Route::get('users/{user}', 'UsersController@show' );
 
-Route::post('songs/{song}/notes', 'NotesController@store');
+Route::post('songs/{song}/details', 'DetailsController@store');
 
-Route::get('/notes/{note}/edit', 'NotesController@edit');
+Route::get('/details/{detail}/edit', 'DetailsController@edit');
 
-Route::get('/notes/{note}/delete', 'NotesController@delete');
+Route::get('/details/{detail}/delete', 'DetailsController@delete');
 
-Route::patch('notes/{note}', 'NotesController@update');
+Route::patch('details/{detail}', 'DetailsController@update');

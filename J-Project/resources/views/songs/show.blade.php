@@ -10,12 +10,12 @@
 
   <ul class="list-group">
 
-@foreach ($song->notes as $note)
+@foreach ($song->details as $detail)
 
   <li class="list-group-item">
-  {{ $note->body }}
-  <a href="/notes/{{ $note->id}}>{{ $note->id }}/edit" class="pull-right">{{ $note->user->name }}</a>
-  <a href="/notes/{{ $note->id}}>{{ $note->id }}/delete" class="pull-center">Delete</a>
+  {{ $detail->body }}
+  <a href="/details/{{ $detail->id}}>{{ $detail->id }}/edit" class="pull-right">{{ $detail->user->name }}</a>
+  <a href="/details/{{ $detail->id}}>{{ $detail->id }}/delete" class="pull-center">Delete</a>
   </li>
 
 @endforeach
@@ -23,7 +23,7 @@
   </ul>
   <h2>What do you think of this singer?</h2>
 
-  <form method="POST" action="/songs/{{ $song->id }}/notes">
+  <form method="POST" action="/songs/{{ $song->id }}/details">
   {{csrf_field()}}
   <div class="form-group">
   <textarea name="body" class="form-control"></textarea>

@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
     public function show(Song $song)
     {
-    $song->load('notes.user');
+    $song->load('details.user');
     return view('songs.show', compact('song'));
     }
 
