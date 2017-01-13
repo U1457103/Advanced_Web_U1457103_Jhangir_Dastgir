@@ -12,14 +12,10 @@ use Illuminate\Http\Request;
     return view('songs.index', compact('songs'));
     }
 
-
     public function show(Song $song)
     {
     $song->load('details.user');
     return view('songs.show', compact('song'));
     }
-
-
-
 
 }

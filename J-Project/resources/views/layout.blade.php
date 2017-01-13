@@ -35,7 +35,7 @@
                             {{ config('Singers', 'Singers') }}
                         </a>
                         <a class="navbar-brand" href="{{ url('/users') }}">
-                            {{ config('All Users', 'All Users') }}
+                            {{ config('Users', 'Users') }}
                         </a>
 
 

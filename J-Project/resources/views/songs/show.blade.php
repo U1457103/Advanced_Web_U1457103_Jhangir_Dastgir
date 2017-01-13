@@ -14,7 +14,8 @@
 
   <li class="list-group-item">
   {{ $detail->body }}
-  <a href="/details/{{ $detail->id}}>{{ $detail->id }}/edit" class="pull-right">{{ $detail->user->name }}</a>
+  <a href="/details/{{ $detail->id}}>{{ $detail->id }}/edit" class="pull-right">Edit Comment</a>
+  <P>Post Created By: {{ $detail->user->name }}</P>
   <a href="/details/{{ $detail->id}}>{{ $detail->id }}/delete" class="pull-center">Delete</a>
   </li>
 
@@ -32,6 +33,10 @@
   <button type="submit" class="btn btn-primary">Add Comment</button>
   </div>
   </form>
+
+
+<a href="{{URL::previous()}}">Go Back</a>
+
 
 @else
 

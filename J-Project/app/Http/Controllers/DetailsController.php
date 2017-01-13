@@ -20,7 +20,7 @@ use Illuminate\Http\Request;
   return back();
   }
 
-  public function edit(Detail $detail){
+  public function edit(Detail $detail, User $user){
   $detail->by(Auth::user());
   return view('details.edit', compact('detail'));
   }
@@ -32,7 +32,7 @@ use Illuminate\Http\Request;
   return back();
   }
 
-  public function delete(Detail $detail, Song $song){
+  public function delete(Detail $detail, Song $song, User $user){
   foreach ($song->details as $detail){
   $detail->delete();}
   $detail->delete();

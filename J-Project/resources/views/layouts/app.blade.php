@@ -42,6 +42,9 @@
                     <a class="navbar-brand" href="{{ url('/songs') }}">
                         {{ config('Singers', 'Singers') }}
                     </a>
+                    <a class="navbar-brand" href="{{ url('/users') }}">
+                        {{ config('Users', 'Users') }}
+                    </a>
 
 
                 </div>
