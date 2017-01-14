@@ -13,11 +13,9 @@
   <textarea name="body" class="form-control">{{ $detail->body }}</textarea>
   </div>
   <div class="form-group">
-  <button type="submit" class="btn btn-primary">Update Your Comment</button>
+  <button type="submit" class="btn btn-primary">Update Post</button>
   </div>
   </form>
-
-  <a href="{{URL::previous()}}">Go Back</a>
 
 @if(Session::has('flash_message'))
   <div class="alert alert-success">
@@ -30,6 +28,11 @@
   You need to be signed in order to edit the comments!
 
 @endif
+
+
+
+
+
 
 
 @stop

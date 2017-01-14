@@ -14,7 +14,7 @@
 
   <li class="list-group-item">
   {{ $detail->body }}
-  <a href="/details/{{ $detail->id}}>{{ $detail->id }}/edit" class="pull-right">Edit Comment</a>
+  <a href="/details/{{ $detail->id}}>{{ $detail->id }}/edit" class="pull-right">Edit Post</a>
   <P>Post Created By: {{ $detail->user->name }}</P>
   <a href="/details/{{ $detail->id}}>{{ $detail->id }}/delete" class="pull-center">Delete</a>
   </li>
@@ -30,13 +30,12 @@
   <textarea name="body" class="form-control"></textarea>
   </div>
   <div class="form-group">
-  <button type="submit" class="btn btn-primary">Add Comment</button>
+  <button type="submit" class="btn btn-primary">Add Post</button>
   </div>
   </form>
 
 
-<a href="{{URL::previous()}}">Go Back</a>
-
+<a href="{{"/songs"}}">Go Back To The Singers Page</a>
 
 @else
 

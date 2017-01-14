@@ -7,12 +7,17 @@
 
 @foreach ($users as $user)
 
-  <div>
-  <p>Username: {{$user->name}}</p>
-  <P>Email Address: {{$user->email}}</P>
-  </div>
+<li class="list-group-item" >
+  <p class="pull-right">
+    Email Address: {{$user->email}}
+  </P>
+  <p>
+    Username: {{$user->name}}
+  </p>
 
+</li>
 @endforeach
 
+<a href="{{"/songs"}}">Go Back To The Singers Page</a>
 
 @stop

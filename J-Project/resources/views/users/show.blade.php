@@ -16,5 +16,5 @@
 
   </ul>
 
-
+<a href="{{"/songs"}}">Go Back To The Singers Page</a>
 @stop
