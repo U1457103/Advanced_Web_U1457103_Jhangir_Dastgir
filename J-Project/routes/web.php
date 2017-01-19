@@ -42,3 +42,8 @@ Route::get('/details/{detail}/delete', 'DetailsController@delete');
 Route::patch('details/{detail}', 'DetailsController@update');
 
 // Users can update the details of the singer.
+
+Route::post('users/{user}', 'UserprofilesController@store');
+
+
+Route::get('/users/{user}/edit', 'UserprofilesController@edit');

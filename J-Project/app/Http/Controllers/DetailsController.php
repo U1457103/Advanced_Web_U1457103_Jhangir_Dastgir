@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 
   class detailsController extends Controller {
 
-  public function store(Request $request, Song $song){
+  public function store(Request $request, Song $song, User $user){
   $this->validate($request, [
   'body' => 'required']);
 // This is validation as the user will need to enter something
@@ -22,7 +22,7 @@ use Illuminate\Http\Request;
   $detail= new Detail($request->all());
   $detail->by(Auth::user());
 // Only the user can enter in the box and add a new comment
-  $song->adddetail($detail);
+  $song->adddetail($detail, $user);
   Session::flash('flash_message', 'Comment Sucessfully added well done!');
 // The user will get a flash message saying well done!!
   return back();
@@ -52,7 +52,7 @@ use Illuminate\Http\Request;
   $detail->delete();
 // The user can delete a comment if they wish too
   return back();
-// The user is re-directed to the same page. 
+// The user is re-directed to the same page.
   }
 
 

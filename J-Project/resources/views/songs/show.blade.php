@@ -8,6 +8,7 @@
 
 @if (Auth::user())
 
+
   <ul class="list-group">
 
 @foreach ($song->details as $detail)
@@ -67,6 +68,7 @@
   </ul>
 
 @endif
+
 
 
   </div>

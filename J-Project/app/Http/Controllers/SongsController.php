@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
     {
     $song->load('details.user');
     return view('songs.show', compact('song'));
-// Lods all of the singers    
+// Lods all of the singers
     }
 
 }

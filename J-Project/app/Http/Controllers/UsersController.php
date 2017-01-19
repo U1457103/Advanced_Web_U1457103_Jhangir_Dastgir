@@ -1,7 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Song;
+use App\Detail;
 use App\User;
+use Auth;
+use Session;
 use Illuminate\Http\Request;
 
     class UsersController extends Controller{
@@ -15,7 +19,9 @@ use Illuminate\Http\Request;
 
     public function show(User $user){
     return view('users.show', compact('user'));
-// shows all the users on the website    
+// shows all the users on the website
     }
+
+
 
 }

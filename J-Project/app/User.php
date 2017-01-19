@@ -3,9 +3,23 @@
 namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
 
   class User extends Authenticatable{
+
+
+
+
+    public function userprofiles(){
+    return $this->hasMany(Userprofile::class);
+    }
+
+    public function by(User $user){
+    $this->user_id = $user->id;
+    }
+
+
   use Notifiable;
   /**
   * The attributes that are mass assignable.

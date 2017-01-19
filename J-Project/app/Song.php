@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 
   public function details(){
   return $this->hasMany(Detail::class);
-// The song has many details.   
+// The song has many details.
   }
 
-  public function adddetail(Detail $detail){
+  public function adddetail(Detail $detail, User $user){
   return $this->details()->save($detail);
   }
 
