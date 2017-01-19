@@ -43,7 +43,18 @@ Route::patch('details/{detail}', 'DetailsController@update');
 
 // Users can update the details of the singer.
 
-Route::post('users/{user}', 'UserprofilesController@store');
+Route::post('users/{user}/userprofiles', 'UserprofilesController@store');
 
+// Users can add to their profile
 
-Route::get('/users/{user}/edit', 'UserprofilesController@edit');
+Route::get('/users/{userprofile}/edit', 'UserprofilesController@edit');
+
+// Users can edit the profile
+
+Route::patch('users/{userprofile}', 'UserprofilesController@update');
+
+// Users can update their profile
+
+Route::get('/users/{userprofile}/delete', 'UserprofilesController@delete');
+
+// Only the ADMIN can delete the user profiles!

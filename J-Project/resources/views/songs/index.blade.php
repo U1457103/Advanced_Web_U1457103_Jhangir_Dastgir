@@ -8,6 +8,7 @@
    What do you think!!! Click On The Singers And Write Your Comments!!
   </p>
 
+
 @foreach ($songs as $song)
     <div>
     <a href="/songs/{{ $song->id}}">{{ $song->title }}</a>

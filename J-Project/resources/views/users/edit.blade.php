@@ -4,28 +4,30 @@
 
 @if (Auth::user())
 
-  <h1>Edit User Comments</h1>
+  <h1>Edit Profile</h1>
 
-  <form method="POST" action="/users/{{ $user->id }}">
+  <div class="container">
+  <form method="POST" action="/users/{{ $userprofile->id }}">
   {{ csrf_field() }}
   {{ method_field('PATCH') }}
   <div class="form-group">
-  <textarea name="profile" class="form-control">{{ $user->profile }}</textarea>
+  <textarea name="profile" class="form-control">{{$userprofile->profile}}</textarea>
   </div>
   <div class="form-group">
-  <button type="submit" class="btn btn-primary">Update Profile Comment</button>
+  <button type="submit" class="btn btn-primary">Update Profile</button>
+  </div>
   </div>
   </form>
 
-@if(Session::has('flash_message'))
-  <div class="alert alert-success">
-  {{ Session::get('flash_message') }}
-  </div>
-@endif
+  @if(Session::has('flash_message'))
+    <div class="alert alert-success">
+    {{ Session::get('flash_message') }}
+    </div>
+  @endif
 
 @else
 
-  You need to be admin in order to edit the profile comments!!!
+  Please Sign In.
 
 @endif
 

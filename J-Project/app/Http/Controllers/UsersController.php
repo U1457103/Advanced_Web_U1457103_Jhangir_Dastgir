@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 
 
     public function show(User $user){
+    $user->load('userprofiles.user');
     return view('users.show', compact('user'));
 // shows all the users on the website
     }

@@ -12,17 +12,17 @@
 
   <li class="list-group-item">
   {{$userprofile->profile}}
+  @if (Auth::user()->email==='Admin@hotmail.co.uk')
+  <a href="/users/{{ $userprofile->id}}/edit" class="pull-right">Edit</a>
+  <a href="/users/{{ $userprofile->id}}>/delete" class="pull-center">Delete</a>
+  @endif
   </li>
-
 @endforeach
-
-
-
 
 
   <h2>Add To Profile</h2>
 
-  <form method="POST" action="/users/{{ $user->id }}">
+  <form method="POST" action="/users/{{ $user->id }}/userprofiles">
   {{csrf_field()}}
   <div class="form-group">
   <textarea name="profile" class="form-control"></textarea>
@@ -37,7 +37,7 @@
 
 @else
 
-  You need to be signed in to view the Profile Comments.
+  You need to be signed in to view the Profiles.
 
 @endif
 

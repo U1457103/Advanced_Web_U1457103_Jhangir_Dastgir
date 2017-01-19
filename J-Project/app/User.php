@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
   class User extends Authenticatable{
 
 
-
+    protected $fillable = ['name', 'email', 'password'];
 
     public function userprofiles(){
     return $this->hasMany(Userprofile::class);
@@ -27,8 +27,6 @@ use Illuminate\Database\Eloquent\Model;
   * @var array
   */
 
-  protected $fillable = [
-  'name', 'email', 'password',];
 
   /**
   * The attributes that should be hidden for arrays.

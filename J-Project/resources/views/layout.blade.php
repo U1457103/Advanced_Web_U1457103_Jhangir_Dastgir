@@ -85,6 +85,8 @@
 
 @yield('footer')
 
+
+
       </body>
 
       </html>

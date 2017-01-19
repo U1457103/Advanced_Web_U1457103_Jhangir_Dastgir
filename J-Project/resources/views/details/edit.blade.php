@@ -2,7 +2,7 @@
 
 @section('content')
 
-@if (Auth::user())
+@if (Auth::id())
 
   <h1>Edit your comment</h1>
 

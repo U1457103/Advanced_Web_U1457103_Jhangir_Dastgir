@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Userprofile extends Model
 {
-
- protected $fillable = ['profile'];
+  protected $fillable = ['profile', 'created_at', 'updated_at'];
+  protected $table = 'userprofiles';
 
   public function user(){
 

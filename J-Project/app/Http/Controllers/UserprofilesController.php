@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
     class UserProfilesController extends Controller{
 
 
-    public function store(Request $request, User $user)
+    public function store(Request $request, User $user, Userprofile $userprofile)
     {
     $this->validate($request, ['profile' => 'required']);
     $userprofile= new Userprofile($request->all());
@@ -20,12 +20,23 @@ use Illuminate\Http\Request;
     return back();
     }
 
-    public function edit(User $user){
-    $user->by(Auth::user());
-    return view('users.edit', compact('user'));
+    public function edit(Userprofile $userprofile, User $user){
+    return view('users.edit', compact('userprofile'));
   // returns the user to the edit page.
     }
 
 
+    public function update(Request $request, Userprofile $userprofile){
+    $userprofile->update($request->all());
+    Session::flash('flash_message', 'You have Updated The Profile well done!');
+    return back();
+    }
 
+    public function delete(Userprofile $userprofile, User $user){
+    foreach ($user->userprofiles as $userprofile){
+    $userprofile->delete();}
+    $userprofile->delete();
+    return back();
+
+}
 }
