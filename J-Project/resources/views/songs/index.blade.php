@@ -11,10 +11,11 @@
 
 @foreach ($songs as $song)
     <div>
-    <a href="/songs/{{ $song->id}}">{{ $song->title }}</a>
+    <a role="button" class="btn btn-sucess" href="/songs/{{ $song->id}}">{{ $song->title }}</a>
     </div>
 
 @endforeach
+
 
 
 @stop

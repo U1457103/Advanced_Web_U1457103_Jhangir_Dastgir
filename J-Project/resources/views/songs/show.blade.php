@@ -15,9 +15,13 @@
 
   <li class="list-group-item">
   {{ $detail->body }}
+@if(Auth::user()->email==='Admin@hotmail.co.uk' || $detail->user->id==Auth::id())
   <a href="/details/{{ $detail->id}}>{{ $detail->id }}/edit" class="pull-right">Edit Post</a>
+@endif
   <P>Post Created By: {{ $detail->user->name }}</P>
+@if(Auth::user()->email==='Admin@hotmail.co.uk' || $detail->user->id==Auth::id())
   <a href="/details/{{ $detail->id}}>{{ $detail->id }}/delete" class="pull-center">Delete</a>
+@endif
   </li>
 
 @endforeach
