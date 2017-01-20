@@ -9,8 +9,15 @@ Backbutton Added.
 
 Table Changed. 
 
+Songs = Singers
+
+(may add the songs to the singers in the future)
+
 Admin table created.
 
 Admin can only edit/delete user profiles.
+(modified so only users can edit and delete their profiles aswell as the admin)
 
 Users can add to their own profiles aswell as talk about others. 
+
+Users can only edit/delete their posts if they are the ones who created them. 
