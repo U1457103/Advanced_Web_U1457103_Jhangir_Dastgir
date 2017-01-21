@@ -10,7 +10,9 @@ Route::get('/', 'HomeController@index' );
 // Shows the Dashboard and Homepage
 
 
-Route::get('songs', 'SongsController@index' );
+Route::get('songs', 'SongsController@index');
+
+Route::post('songs', 'SongsController@search' );
 
 Route::get('songs/{song}', 'SongsController@show' );
 
