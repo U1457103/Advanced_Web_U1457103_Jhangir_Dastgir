@@ -21,13 +21,13 @@ use Illuminate\Http\Request;
   Session::flash('flash_message', 'Comment Sucessfully added well done!');
   return back();
   }
-// Add's the singer to this page. Validation in place as you need the body field to submit. Admin can do this.
+// Add's the singer to this page. Validation in place as you need the body field to submit. Admin can Also do this.
 
   public function edit(Detail $detail, User $user){
   $detail->by(Auth::user());
   return view('details.edit', compact('detail'));
   }
-// Only the user who made the post can edit. Admin can do this.
+// Only the user who made the post can edit. Admin can Also do this.
 
   public function update(Request $request, Detail $detail){
   $detail->by(Auth::user());
@@ -35,7 +35,7 @@ use Illuminate\Http\Request;
   Session::flash('flash_message', 'You have Updated Your comment well done!');
   return back();
   }
-// Only the user who made the post can update. Admin can do this.
+// Only the user who made the post can update. Admin can Also do this.
 
   public function delete(Detail $detail, Song $song, User $user){
   foreach ($song->details as $detail){
@@ -43,6 +43,6 @@ use Illuminate\Http\Request;
   $detail->delete();
   return back();
   }
-// Only the user who made the post can delete. Admin can do this.
+// Only the user who made the post can delete. Admin can Also do this.
 
 }

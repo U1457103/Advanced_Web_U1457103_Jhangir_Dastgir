@@ -17,7 +17,7 @@ Route::post('songs', 'SongsController@search' );
 
 Route::get('songs/{song}', 'SongsController@show' );
 
-// Shows all the Singers In the SongsController
+// Shows all the Singers In the SongsController, Also Only the admin can view site details.
 
 Route::get('users', 'UsersController@index' );
 
@@ -34,7 +34,6 @@ Route::get('/details/{detail}/delete', 'DetailsController@delete');
 Route::patch('details/{detail}', 'DetailsController@update');
 
 // Users can edit/delete and add a detail about the singers. Admin can also do this
-
 
 Route::post('users/{user}/userprofiles', 'UserprofilesController@store');
 

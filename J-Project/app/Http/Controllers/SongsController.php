@@ -23,13 +23,7 @@ use Illuminate\Http\Request;
     ->elementLabel("Total User Posts On The Website")
     ->groupBy( 'name');
     return view('songs.admin', ['chart' => $chart]);
-    }
-
-    public function songs(){
-    $chart = Charts::database(Detail::all(), 'bar', 'highcharts')
-    ->elementLabel("User Posts")
-    ->groupBy('song_id', 'User_id');
-    return view('home', ['chart' => $chart]);
+    // Shows the admin the total number of user posts on the website.
     }
 
   public function search(Request $request){
@@ -37,6 +31,7 @@ use Illuminate\Http\Request;
     $songs = Song::where('title','like','%'.$search.'%')->get();
     return view('songs.index', compact('songs'));
   }
+  // Users can enter the singer's name and it wil appear. 
 
     public function show(Song $song)
     {

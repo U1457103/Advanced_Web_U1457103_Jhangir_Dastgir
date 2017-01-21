@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
     Session::flash('flash_message', 'Profile Comment Sucessfully added well done!');
     return back();
     }
-// Add userprofile to the users profile and other users profile.
+// Add userprofile to the users profile.
 
     public function edit(Userprofile $userprofile, User $user){
     return view('users.edit', compact('userprofile'));

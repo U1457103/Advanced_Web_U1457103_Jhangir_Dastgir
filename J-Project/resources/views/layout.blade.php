@@ -39,9 +39,11 @@
                         <a class="navbar-brand" href="{{ url('/users') }}">
                             {{ config('Users', 'Users') }}
                         </a>
+                        @if (Auth::user())
                         <a class="navbar-brand" href="{{ url('/admin') }}">
                             {{ config('Site Details', 'Site Details') }}
                         </a>
+                      @endif
 
                     </div>
 

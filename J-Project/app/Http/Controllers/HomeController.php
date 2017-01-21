@@ -32,7 +32,7 @@ use App\User;
   ->groupBy('name');
   return view('home', ['chart' => $chart]);
   }
-
+// Shows the Chart to the admin. 
 
 
 }

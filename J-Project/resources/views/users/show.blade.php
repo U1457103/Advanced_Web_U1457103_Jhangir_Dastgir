@@ -22,9 +22,8 @@
   </li>
 @endforeach
 
-
+@if(Auth::user()->email==='Admin@hotmail.co.uk' || $userprofile->user->id==Auth::id())
   <h2>Add To Profile</h2>
-
   <form method="POST" action="/users/{{ $user->id }}/userprofiles">
   {{csrf_field()}}
   <div class="form-group">
@@ -34,7 +33,7 @@
   <button type="submit" class="btn btn-primary">Add Profile</button>
   </div>
   </form>
-
+@endif
 
 <a href="{{"/users"}}">Go Back To The Users Page</a>
 

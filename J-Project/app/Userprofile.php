@@ -10,7 +10,6 @@ class Userprofile extends Model
   protected $table = 'userprofiles';
 
   public function user(){
-
   return $this->belongsTo(User::class);
   }
 
