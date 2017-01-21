@@ -21,3 +21,9 @@ Admin can only edit/delete user profiles.
 Users can add to their own profiles aswell as talk about others. 
 
 Users can only edit/delete their posts if they are the ones who created them. 
+
+Only admin can view 2 Graphs. One displaying all users and other Total user posts.
+
+All authentication working, for users/guests and Admin. 
+
+Code cleanup and comments added. 
