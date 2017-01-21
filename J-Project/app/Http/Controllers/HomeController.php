@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use Charts;
+use App\User;
+
+
 
   class HomeController extends Controller
   {
@@ -22,6 +27,12 @@ use Illuminate\Http\Request;
   */
 
   public function index(){
-  return view('home');
+  $chart = Charts::database(User::all(), 'bar', 'highcharts')
+  ->elementLabel("Users On The Website")
+  ->groupBy('name');
+  return view('home', ['chart' => $chart]);
+
+
+
   }
 }

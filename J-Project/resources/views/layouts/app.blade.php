@@ -13,6 +13,8 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
+        {!! Charts::assets() !!}
+
 
     <!-- Scripts -->
     <script>

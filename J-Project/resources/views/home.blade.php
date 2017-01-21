@@ -9,9 +9,11 @@
   <div class="panel-heading">Dashboard</div>
   <div class="panel-body">
 
+@if (Auth::user()->email==='Admin@hotmail.co.uk')
+ {!! $chart->render() !!}
+@endif
 
 
-<img src="http://i939.photobucket.com/albums/ad235/greenguy221/musicismylife.gif" alt="Banner">
 
     <p>Go Ahead and explore the website!!</p>
 
