@@ -12,11 +12,11 @@
 
   <li class="list-group-item">
   {{$userprofile->profile}}
-@if(Auth::user()->email==='Admin@hotmail.co.uk' || $detail->user->id==Auth::id())
+@if(Auth::user()->email==='Admin@hotmail.co.uk' || $userprofile->user->id==Auth::id())
   <a href="/users/{{ $userprofile->id}}/edit" class="pull-right">Edit</a>
 @endif
 
-@if(Auth::user()->email==='Admin@hotmail.co.uk' || $detail->user->id==Auth::id())
+@if(Auth::user()->email==='Admin@hotmail.co.uk' || $userprofile->user->id==Auth::id())
   <a href="/users/{{ $userprofile->id}}>/delete" class="pull-center">Delete</a>
 @endif
   </li>

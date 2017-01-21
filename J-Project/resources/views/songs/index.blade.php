@@ -2,14 +2,7 @@
 
 @section('content')
 
-  <h1>Are They Good? Are They Bad?</h1>
-
-  <p>
-   What do you think!!! Click On The Singers And Write Your Comments!!
-  </p>
-
-
-
+<h2>Search for the Singer</h2>
 
     <form method="POST">
       {{csrf_field()}}
@@ -21,6 +14,13 @@
         </span>
     </div>
   </form>
+
+
+  <p>Are They Good? Are They Bad?</p>
+
+  <p>
+   What do you think!!! Click On The Singers And Write Your Comments!!
+  </p>
 
 
 

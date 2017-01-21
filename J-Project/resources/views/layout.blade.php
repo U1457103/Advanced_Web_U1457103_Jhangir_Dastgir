@@ -9,7 +9,7 @@
 
   <link href="/css/app.css" rel="stylesheet">
 
-        
+        {!! Charts::assets() !!}
 
 
         @yield('header')
@@ -39,7 +39,9 @@
                         <a class="navbar-brand" href="{{ url('/users') }}">
                             {{ config('Users', 'Users') }}
                         </a>
-
+                        <a class="navbar-brand" href="{{ url('/admin') }}">
+                            {{ config('Site Details', 'Site Details') }}
+                        </a>
 
                     </div>
 

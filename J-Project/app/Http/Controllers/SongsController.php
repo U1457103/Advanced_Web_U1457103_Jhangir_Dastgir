@@ -5,6 +5,7 @@ use App\Song;
 use App\Detail;
 use App\User;
 use Auth;
+use Charts;
 use Session;
 use Illuminate\Http\Request;
 
@@ -15,6 +16,20 @@ use Illuminate\Http\Request;
     $songs = Song::all();
     return view('songs.index', compact('songs'));
     //  Shows all the singers on the singers page
+    }
+
+    public function admin(Request $request){
+    $chart = Charts::database(Detail::all(), 'bar', 'highcharts')
+    ->elementLabel("Total User Posts On The Website")
+    ->groupBy( 'name');
+    return view('songs.admin', ['chart' => $chart]);
+    }
+
+    public function songs(){
+    $chart = Charts::database(Detail::all(), 'bar', 'highcharts')
+    ->elementLabel("User Posts")
+    ->groupBy('song_id', 'User_id');
+    return view('home', ['chart' => $chart]);
     }
 
   public function search(Request $request){

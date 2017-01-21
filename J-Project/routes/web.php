@@ -11,6 +11,8 @@ Route::get('/', 'HomeController@index' );
 
 Route::get('songs', 'SongsController@index');
 
+Route::get('admin', 'SongsController@admin');
+
 Route::post('songs', 'SongsController@search' );
 
 Route::get('songs/{song}', 'SongsController@show' );

@@ -31,8 +31,8 @@ use App\User;
   ->elementLabel("Users On The Website")
   ->groupBy('name');
   return view('home', ['chart' => $chart]);
-
-
-
   }
+
+
+
 }
