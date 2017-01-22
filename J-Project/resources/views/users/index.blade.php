@@ -2,10 +2,10 @@
 
 @section('content')
 
-  <h1>View All Users</h1>
+  <h1>View All Users Profiles</h1>
 
 <p>
-   You can also add to the User Profile's and write what you think about the person or just read their wonderful profile
+  View Your Profile And Other Peoples Profiles. You Can Only Add And Edit Your Own Profile.
 </p>
 
 @foreach ($users as $user)
